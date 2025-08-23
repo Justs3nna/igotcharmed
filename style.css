@@ -1,0 +1,155 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #2d83bd8a, #44a4e4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+p {
+  font-size: 19px;
+}
+
+/* Container */
+.container {
+  position: relative;
+  width: 600px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+.container.opened .flap,
+.container.opened .heart-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+
+/* Envelope base */
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #2095f5;
+  border: 2px solid rgb(0, 156, 246);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.flap {
+  position: absolute;
+  top: 31.6%; /* 190 / 600 * 100 */
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 300px solid transparent; /* fixed size */
+  border-right: 300px solid transparent;
+  border-bottom: 190px solid #0a6ae7cb;
+  transform-origin: top center;
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+
+
+/* Letter */
+.letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 50px;
+  overflow-y: auto;
+  opacity: 0;
+  z-index: 1;
+  transition: all 1s ease;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 156, 246) transparent;
+  font-family: 'Palatino Linotype', 'Georgia', serif;
+  color: #1c1c1c;
+  font-size: 1.25rem;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.letter::-webkit-scrollbar {
+  width: 10px;
+}
+
+.letter::-webkit-scrollbar-thumb {
+  background: rgb(0, 156, 246);
+  border-radius: 6px;
+}
+
+/* Hide scrollbar but keep scrolling */
+.letter {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.letter::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.poem p {
+  margin-bottom: 18px;
+}
+
+.heart-btn {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  font-size: 6.2rem;
+  cursor: pointer;
+  animation: pulse 5.5s infinite;
+  user-select: none;
+  filter: drop-shadow(0 0 3px #0a6ae7);
+  z-index: 9999; /* high z-index to be on top */
+}
+
+.letter {
+  overflow-y: auto;
+  scroll-behavior: smooth; /* smooth scrolling */
+  position: relative;
+  /* your other styles */
+}
+
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.15);
+  }
+}
+
+/* Opened State */
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+  opacity: 1;
+}
