@@ -58,7 +58,7 @@ function typeWriterEffect(elementId, htmlContent, speed = 500) { // slower speed
   paragraphs.forEach((p, index) => {
     formattedText += p.innerText;
     if (index < paragraphs.length - 1) {
-      formattedText += "\n\n";
+      formattedText += "\n";
     }
   });
 
