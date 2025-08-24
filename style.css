@@ -7,13 +7,16 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #2d83bd8a, #44a4e4);
+  background: 
+    linear-gradient(to bottom, #2d83bd52, #44a4e498), url('blue1.jpg') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
+
 
 p {
   font-size: 19px;
@@ -28,6 +31,7 @@ p {
 }
 
 .container.opened .flap,
+.container.opened .flap1,
 .container.opened .heart-btn {
   opacity: 0;
   pointer-events: none;
@@ -59,6 +63,20 @@ p {
   border-bottom: 190px solid #0a6ae7cb;
   transform-origin: top center;
   transform: rotate(180deg);
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.flap1 {
+  position: absolute;
+  top: 49.8%; /* 190 / 600 * 100 */
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 300px solid transparent; /* fixed size */
+  border-right: 300px solid transparent;
+  border-bottom: 190px solid #0a6ae7cb;
+  transform-origin: top center;
   transition: transform 1s ease;
   z-index: 2;
 }

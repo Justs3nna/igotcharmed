@@ -144,3 +144,17 @@ function resizeFlap() {
 
 window.addEventListener('resize', resizeFlap);
 window.addEventListener('load', resizeFlap);
+
+function resizeFlap1() {
+  const container = document.querySelector('.container');
+  const flap1 = document.querySelector('.flap1');
+  const containerWidth = container.offsetWidth;
+
+  flap1.style.borderLeftWidth = (containerWidth / 2) + 'px';
+  flap1.style.borderRightWidth = (containerWidth / 2) + 'px';
+  flap1.style.borderBottomWidth = (containerWidth * 0.316) + 'px'; // 190 / 600 = 0.316
+  flap1.style.top = (containerWidth * 0.316) + 'px';
+}
+
+window.addEventListener('resize', resizeFlap1);
+window.addEventListener('load', resizeFlap1);
