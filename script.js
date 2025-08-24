@@ -1,22 +1,22 @@
 const poemHTML = `
 
-  <p>In this world so full of yellow,<br>
-  I want to be your shade of blue.<br>
+  <p>In this world filled with gray, almost no glow,<br>
+  I want to be the vivid, your shade of blue.<br>
   Just like how roses bloom in red,<br>
   My feelings are sincere, patient, and true.</p>
 
   <p>This must be the feeling, just admiring from afar,<br>
-  When a glance from you feels brighter than a star.<br>
+  When a glance from you feels brighter than any star.<br>
   I watch, I wonder, quietly subdued,<br>
   Content in silence, lost in thoughts of you.</p>
 
   <p>This poem’s not a crafted drama,<br>
   Nor a plea to win your panorama.<br>
   I just need you to know,<br>
-  You've lit a spark that set me ablaze.</p>
+  You've lit a spark I couldnt outgrow.</p>
 
   <p>You may think you've done nothing,<br>
-  But you've inspired me to change<br>
+  But your presence inspired me to change<br>
   To grow, to rise, to better myself,<br>
   To let go of habits I couldn't estrange.</p>
 
@@ -25,7 +25,7 @@ const poemHTML = `
   Or fleeting updates and soft assurances,<br>
   But the truth behind your silent cries.</p>
 
-  <p>I want to be the reason you smile,<br>
+  <p>I want to be the reason of your smile,<br>
   The calm in your restless night.<br>
   The softness behind your every touch,<br>
   The warmth that holds you tight.</p>
@@ -40,7 +40,7 @@ const poemHTML = `
   But in some future stitched by time,<br>
   I dream of being the calm of your mind.</p>
 
-  <p>What can I do? I got charmed. So may I…<br>
+  <p>What can I do? I got charmed by you. So may I…<br>
   May I have the chance to prove it true<br>
   To capture your heart, and cherish you?<br>
   So may I? May I court you?</p>
